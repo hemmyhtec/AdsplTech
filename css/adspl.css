@@ -1,0 +1,330 @@
+@font-face {
+    font-family: "WhyteOne";
+    src: url(../font/WhyteInktrap-Thin.ttf);
+    /* font-weight: bold; */
+}
+
+@font-face {
+    font-family: "WhyteBlack";
+    src: url(../font/WhyteInktrap-Black.ttf);
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: "WhyteNormal";
+    src: url(../font/WhyteInktrap-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "WhyteMedium";
+    src: url(../font/WhyteInktrap-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "WhyteBold";
+    src: url(../font/WhyteInktrap-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "WhyteBoldItalic";
+    src: url(../font/WhyteInktrap-BoldItalic.ttf) format("truetype");
+}
+
+a {
+    text-decoration: none;
+    color: #031b3f;
+}
+
+.primaryColor {
+    color: #031b3f;
+}
+
+.secondaryColor {
+    color: #4a4a4a;
+}
+
+.whiteColor {
+    color: rgb(240, 240, 240);
+}
+
+nav {
+    font-family: "WhyteNormal";
+    font-size: 1.1em;
+    /* letter-spacing: 1px; */
+    white-space: inherit;
+}
+
+.navbar-nav {
+    transition: transform 750ms;
+    will-change: transform;
+}
+
+.navbar-nav :hover {
+    transform: translateY(5px);
+    transition: transform 800ms;
+}
+
+.navbar-toggler {
+    border: none;
+    border-radius: 10px;
+    animation: slide 10ms;
+}
+
+.navbar-toggler:active {
+    border: none;
+    border-radius: 10px;
+    animation: slide 10ms;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 10px;
+    animation: slide 10ms;
+}
+
+.dropdown {
+    transition: transform 750ms;
+    will-change: transform;
+}
+
+.dropdown:hover {
+    /* animation: slide 100s linear; */
+    transform: translateY(5px);
+}
+
+.flex-column {
+    flex-direction: column!important;
+}
+
+.d-flex {
+    display: flex!important;
+}
+
+.megasubmenu {
+    padding: 1rem;
+}
+
+
+/* ============ desktop view ============ */
+
+@media all and (min-width: 1200px) {
+    .megasubmenu {
+        left: -200%;
+        top: 50px;
+        min-height: 100%;
+        min-width: 500px;
+    }
+    .dropdown-menu>li:hover .megasubmenu {
+        display: block;
+    }
+}
+
+.btn-primary {
+    background-color: #031b3f;
+}
+
+.btn-primary:hover {
+    background-color: #00255c;
+}
+
+.bgPrimary {
+    background-color: #031b3f;
+}
+
+.tryer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+h1 {
+    font-family: "WhyteBold";
+    color: white;
+    font-size: 3.5rem;
+}
+
+.fontApplyNormal {
+    font-family: "WhyteNormal";
+    font-size: 1em;
+}
+
+.fontApplyBold {
+    font-family: "WhyteBold";
+}
+
+.d-flex {
+    padding: 5px;
+}
+
+@media (min-width: 992px) {
+    .for-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .for-mobile {
+        text-align: center;
+        margin-top: 60px;
+        height: 70ch;
+        /* background-image: url(../assets/slide-video.png); */
+        background-repeat: no-repeat;
+        background-blend-mode: soft-light;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 992px) {
+    .for-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .for-desktop {
+        margin: 20px;
+    }
+}
+
+.service-section {
+    margin-top: 60px;
+    height: auto;
+}
+
+.service-section .card {
+    border-radius: 20px;
+    height: 10rem;
+    margin: 5px;
+}
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.viewport-header {
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes showup {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        width: 0px;
+    }
+    20% {
+        opacity: 1;
+        width: 0px;
+    }
+    30% {
+        width: 355px;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 355px;
+    }
+}
+
+p {
+    text-align: left;
+    font-family: "WhyteNormal";
+}
+
+p:hover {
+    color: rgb(0, 0, 0);
+}
+
+.about-us-section {
+    margin-top: 8rem;
+}
+
+.counter-box {
+    display: block;
+    background: #f6f6f6;
+    padding: 40px 20px 37px;
+    text-align: center;
+}
+
+.counter-box p {
+    margin: 5px 0 0;
+    padding: 0;
+    color: #d6d6d6;
+    font-size: 18px;
+    text-align: center;
+}
+
+.counter-box i {
+    font-size: 60px;
+    margin: 0 0 15px;
+    color: #d2d2d2
+}
+
+.counter {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(148, 148, 148);
+    line-height: 28px
+}
+
+.counter-box.colored {
+    background: #031b3f;
+}
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+    color: #fff
+}
+
+.contact-section {
+    background-color: white;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 50px;
+}
+
+.company-background {
+    /* position: absolute; */
+    width: 1027.53px;
+    height: 500px;
+    top: -175.98px;
+    background: #460505;
+    width: 10ch;
+    height: 50vw
+}
+
+.company-section .card {
+    background-color: #00255c;
+    color: white;
+    border-radius: 10px;
+}
