@@ -328,3 +328,15 @@ p:hover {
     color: white;
     border-radius: 10px;
 }
+
+.heroSection {
+    height: 200px;
+    width: auto;
+    padding: 40px;
+    margin-top: 30px;
+    /* background-color: #00255c; */
+}
+
+.heroSectionComp {
+    font-size: 50px;
+}
