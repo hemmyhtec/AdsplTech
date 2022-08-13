@@ -342,7 +342,6 @@ p:hover {
 }
 
 .backGroundLayer {
-    width: 90%;
     filter: drop-shadow(10px 10px 0px #00255c);
 }
 
