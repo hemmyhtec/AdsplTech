@@ -18,18 +18,78 @@
     <link rel="shortcut icon" href="assets/ADSPL-LOGOWHITE.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a0edd03c73.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="js/script.js"></script>
-
-
+    <link rel="stylesheet" href="css/chatbot.css">
+    <script src="js/chatbox.js"></script>
+    <link rel="stylesheet" href="css/jquery.convform.css">
+    <script src="js/jquery.convform.js"></script>
     <script>
         $(function() {
             $("#menu").load("menu.html");
             $("#footer").load("footer.html");
+            // $("#chatbox").load("chatbox.html");
         });
     </script>
 </head>
 
 <body>
+    <!-- ========== ChatBox Section ========== -->
+    <div class="chat_icon">
+        <i class="fa-solid fa-comments animate__animated animate__wobble"></i>
+    </div>
+
+    <div class="chat_box">
+
+        <div class="conv-form-wrapper">
+            <!-- <h3 class="m-10">Welcome to Adspltech ChatBot</h4>  -->
+            <form action="" method="GET" class="hidden">
+                <select name="category" data-conv-question="Welcome to Adspltech. What can I help you with today? ">
+                    <option value="webDevelopment">Web Development?</option>
+                    <option value="mobileDevelopment">Mobile Deveoplment?</option>
+                    <option value="industrialIoT">Industrial IoT?</option>
+                <option value="healthCareIoT">Health care IoT?</option>
+                <option value="smartcityIoT">Smart city IoT?</option>
+
+                <option value="noOption">Can't find Option?</option>
+            </select>
+                <div data-conv-fork="category">
+                    <div data-conv-case="webDevelopment">
+                        <input type="text" data-callback="storeState" name="name" data-conv-question="Alright! First, tell me your full name, please.|Okay! Please, tell me your name first">
+                        <input type="text" data-conv-question="Howdy, {name}:0! It's a pleasure to meet you." data-no-answer="true">
+                    </div>
+                    <div data-conv-case="mobileDevelopment">
+                        <input type="text" name="name" data-conv-question="Alright! First, tell me your full name, please.|Okay! Please, tell me your name first">
+                        <input type="text" data-conv-question="Howdy, {name}:0! It's a pleasure to meet you." data-no-answer="true">
+                    </div>
+                    <div data-conv-case="industrialIoT">
+                        <input type="text" name="name" data-conv-question="Alright! First, tell me your full name, please.|Okay! Please, tell me your name first">
+                        <input type="text" data-conv-question="Howdy, {name}:0! It's a pleasure to meet you." data-no-answer="true">
+                    </div>
+                    <div data-conv-case="healthCareIoT">
+                        <input type="text" name="name" data-conv-question="Alright! First, tell me your full name, please.|Okay! Please, tell me your name first">
+                        <input type="text" data-conv-question="Howdy, {name}:0! It's a pleasure to meet you." data-no-answer="true">
+                    </div>
+                    <div data-conv-case="smartcityIoT">
+                        <input type="text" name="name" data-conv-question="Alright! First, tell me your full name, please.|Okay! Please, tell me your name first">
+                        <input type="text" data-conv-question="Howdy, {name}:0! It's a pleasure to meet you." data-no-answer="true">
+                    </div>
+                    <input data-conv-question="Type in your e-mail" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" id="email" type="email" name="email" required placeholder="What's your e-mail?">
+
+                    <input type="number" name="number" data-conv-question="Almost there!!! Please provide your mobile no.">
+                    <select name="callbackTest" data-conv-question="Thanks for your time. A agent will get in touch with your soon">
+                        <option value="yes" data-callback="rollback">Restart</option>
+                        <option value="no" data-callback="restore">Satisfied</option>
+                    </select>
+                    <select data-conv-question="Do have a good day!!!" id="">
+                        <option value="">Awesome!</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ========== ChatBox End Section ========== -->
+
     <!-- Navigation Bar -->
     <div class="container">
         <!-- <div id="menu"></div> -->
@@ -66,15 +126,15 @@
                                                     <div class="card card-body">
                                                         <li><a href="Iot-Industry.html">Industrial IoT</a></li>
                                                         <li>
-                                                            <a href="">Agricultural IoT</a></li>
+                                                            <a href="Agricultural-Iot.html">Agricultural IoT</a></li>
                                                         <li>
-                                                            <a href="">Retail IoT</a></li>
+                                                            <a href="Retail-Iot.html">Retail IoT</a></li>
                                                         <li>
-                                                            <a href="">Automative IoT</a></li>
+                                                            <a href="Automative-Iot.html">Automative IoT</a></li>
                                                         <li>
-                                                            <a href="">Health care IoT</a></li>
+                                                            <a href="Heathly-care-Iot.html">Health care IoT</a></li>
                                                         <li>
-                                                            <a href="">Smart city IoT</a></li>
+                                                            <a href="Smart-City-Iot.html">Smart city IoT</a></li>
                                                     </div>
                                                 </div>
                                             </div>
@@ -86,9 +146,9 @@
                                             <div class="col">
                                                 <div class="collapse multi-collapse" id="multiCollapseExample1">
                                                     <div class="card card-body">
-                                                        <li><a href="">Artificial Intellegence</a></li>
+                                                        <li><a href="Artificial-Intellegence.html">Artificial Intellegence</a></li>
                                                         <li>
-                                                            <a href="">Machine Learning</a></li>
+                                                            <a href="Machine-Learning.html">Machine Learning</a></li>
                                                     </div>
                                                 </div>
                                             </div>
@@ -96,19 +156,19 @@
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
-                                        <li><a class="dropdown-item" href="#">AR/VR Solutions</a></li>
+                                        <li><a class="dropdown-item" href="AR-VR-Solutions.html">AR/VR Solutions</a></li>
                                     </div>
                                     <div class="col-8">
                                         <h5>Services</h5>
-                                        <li><a class="dropdown-item" href="#">Software Product Development</a></li>
-                                        <li><a class="dropdown-item" href="#">Custom Software Development</a></li>
-                                        <li><a class="dropdown-item" href="#">Technology Consulting Prototyping</a></li>
-                                        <li><a class="dropdown-item" href="#">Dedicated Development Teams</a></li>
-                                        <li><a class="dropdown-item" href="#">Software Re-engineering</a></li>
-                                        <li><a class="dropdown-item" href="#">Customization And Enhancement</a></li>
-                                        <li><a class="dropdown-item" href="#">Web Application Development</a></li>
-                                        <li><a class="dropdown-item" href="#">Mobile App Development</a></li>
-                                        <li><a class="dropdown-item" href="#">Services For Start Up</a></li>
+                                        <li><a class="dropdown-item" href="Software-Product.html">Software Product Development</a></li>
+                                        <li><a class="dropdown-item" href="Custom-Software.html">Custom Software Development</a></li>
+                                        <li><a class="dropdown-item" href="Technology-Consulting.html">Technology Consulting Prototyping</a></li>
+                                        <li><a class="dropdown-item" href="Dedicated-Development.html">Dedicated Development Teams</a></li>
+                                        <li><a class="dropdown-item" href="Software-ReEng.html">Software Re-engineering</a></li>
+                                        <li><a class="dropdown-item" href="Customization.html">Customization And Enhancement</a></li>
+                                        <li><a class="dropdown-item" href="Web-Application.html">Web Application Development</a></li>
+                                        <li><a class="dropdown-item" href="Mobile-App.html">Mobile App Development</a></li>
+                                        <li><a class="dropdown-item" href="Service-Start.html">Services For Start Up</a></li>
 
                                     </div>
                                 </div>
@@ -119,11 +179,11 @@
                             <ul class="shadow dropdown-menu megasubmenu" aria-labelledby="navbarDropdown">
                                 <div class="row">
                                     <div class="col-6">
-                                        <li><a class="dropdown-item" href="#">Smart Device - IOT</a></li>
-                                        <li><a class="dropdown-item" href="#">Inventory & Sales Prediction</a></li>
-                                        <li><a class="dropdown-item" href="#">Face Recognition</a></li>
-                                        <li><a class="dropdown-item" href="#">Meeting Action Software</a></li>
-                                        <li><a class="dropdown-item" href="#">AI Chatbot</a></li>
+                                        <li><a class="dropdown-item" href="Smart-Device.html">Smart Device - IOT</a></li>
+                                        <li><a class="dropdown-item" href="Inventory-Sales.html">Inventory & Sales Prediction</a></li>
+                                        <li><a class="dropdown-item" href="Face-Recognition.html">Face Recognition</a></li>
+                                        <li><a class="dropdown-item" href="Meeting-Software.html">Meeting Action Software</a></li>
+                                        <li><a class="dropdown-item" href="AI-ChatBot.html">AI Chatbot</a></li>
                                     </div>
                                     <div class="col-6">
                                         <p>Smart Device - IOT ADSPL is bringing a series of “Intelli+Save” products for your Smart Home which will be truly a steppingstone for anyone who wants to enjoy the experience of life in the future.
@@ -133,10 +193,10 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Portfolio</a>
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Careers</a>
+                            <a class="nav-link" href="careers.html">Careers</a>
                         </li>
                         <li class="nav-item">
                             <button class="btn btn-primary shadow-lg">Hire Us</button>
@@ -541,6 +601,39 @@
     <!-- ========== End Footer ========== -->
 
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <script>
+        var rollbackTo = false;
+        var originalState = false;
+
+        function storeState(stateWrapper, ready) {
+            rollbackTo = stateWrapper.current;
+            console.log("storeState called: ", rollbackTo);
+            ready();
+        }
+
+        function rollback(stateWrapper, ready) {
+            console.log("rollback called: ", rollbackTo, originalState);
+            console.log("answers at the time of user input: ", stateWrapper.answers);
+            if (rollbackTo != false) {
+                if (originalState == false) {
+                    originalState = stateWrapper.current.next;
+                    console.log('stored original state');
+                }
+                stateWrapper.current.next = rollbackTo;
+                console.log('changed current.next to rollbackTo');
+            }
+            ready();
+        }
+
+        function restore(stateWrapper, ready) {
+            if (originalState != false) {
+                stateWrapper.current.next = originalState;
+                console.log('changed current.next to originalState');
+            }
+            ready();
+        }
+    </script>
+
 </body>
 
 </html

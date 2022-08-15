@@ -1,0 +1,43 @@
+.chat_icon {
+    position: fixed;
+    right: 30px;
+    bottom: 0;
+    font-size: 50px;
+    color: #ffd000;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chat_box {
+    position: fixed;
+    right: 20px;
+    bottom: 70px;
+    width: 300px;
+    height: 80vh;
+    background-color: aliceblue;
+    z-index: 1000;
+    transform: all 0.3s ease-out;
+    transform: scaleY(0);
+    border-radius: 10px;
+    box-shadow: -15px 11px 25px -8px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: -15px 11px 25px -8px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: -15px 11px 25px -8px rgba(0, 0, 0, 0.15);
+}
+
+.chat_box.active {
+    transform: scaleY(1);
+}
+
+.hidden {
+    display: nonen !important;
+}
+
+.conv-form-wrapper textarea {
+    height: 30px;
+    overflow: hidden;
+    resize: none;
+}
+
+#messages {
+    padding: 20px;
+}
