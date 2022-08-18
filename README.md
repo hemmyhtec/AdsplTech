@@ -4,7 +4,7 @@
 
 
 # **Frontend -  ADSPL Website**
-Homepage
+- Homepage
 Menu
 Fonts
 Colours of all components
