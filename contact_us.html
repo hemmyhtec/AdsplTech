@@ -28,12 +28,13 @@
             $("#footer").load("footer.html");
         });
     </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light shadow-lg">
-        <div class="container-fluid" <a class="navbar-brand" href="#"><img class="img-responsive" src="assets/ADSPL-LOGOWHITE.png" alt="" width="50" height="50"></a>
+        <div class="container-fluid" <a class="navbar-brand" href="#"><img class="img-responsive" src="assets/ADSPL-LOGOWHITE.png" alt="IoT company in Madhya Pradesh Logo" width="50" height="50"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars-staggered"></i></button>
 
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
@@ -228,28 +229,28 @@
                         <h3 class="">Get in Touch with Us</h3>
                     </div>
 
-                    <form class="row g-3">
+                    <form class="row g-3" method="POST" enctype="multipart/form-data" id="form">
                         <div class="col-md-6">
-                            <!-- <label for="inputEmail4" class="form-label">Fullname</label> -->
-                            <input type="text" class="form-control" id="inputText" placeholder="John Deo">
+                            <label for="inputEmail4" class="form-label">Fullname</label>
+                            <input type="text" class="form-control" id="inputText" placeholder="Fullname" name="fullname" required>
                         </div>
                         <div class="col-md-6">
-                            <!-- <label for="inputPassword4" class="form-label">Email</label> -->
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="johndeo@gmail.com">
+                            <label for="inputPassword4" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Valid Email Address" name="email" required>
                         </div>
                         <div class="col-12">
-                            <!-- <label for="inputAddress" class="form-label">Subject</label> -->
-                            <input type="text" class="form-control" id="inputSubject" placeholder="Can you make my SEO Rank Better on Geogle?">
+                            <label for="inputAddress" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="inputSubject" placeholder="How can we help you?" name="mobileno" required>
                         </div>
                         <div class="col-12">
 
-                            <!-- <label for="exampleFormControlTextarea1" class="form-label">Message</label> -->
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Please enter some description."></textarea>
+                            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="position" placeholder="Please enter some description." required></textarea>
 
                         </div>
 
                         <div class="col-12 pt-3">
-                            <button type="submit" class="btn btn-primary">Sign in</button>
+                            <input type="submit" id="button" class="btn btn-outline-success" value="Submit" />
                         </div>
                     </form>
 
@@ -278,11 +279,13 @@
     <!-- ========== End Section ========== -->
 
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         emailjs.init('Ee_X2GuZ5fsINwESK')
     </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="js/hireUs.js"></script>
+    <!-- <script src="js/careerForm.js"></script> -->
+
 </body>
 
 </html>
