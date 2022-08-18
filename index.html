@@ -27,9 +27,17 @@
         });
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $(".loader-wrapper").fadeOut("slow")
+        })
+    </script>
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <div class="loader"><span class="loader-inner"></span></div>
+    </div>
     <!-- ========== ChatBox Section ========== -->
     <!-- <div class="chat_icon">
         <i class="fa-solid fa-comments animate__animated animate__wobble"></i>
