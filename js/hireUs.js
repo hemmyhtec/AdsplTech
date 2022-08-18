@@ -12,7 +12,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
         .then(() => {
             btn.value = 'Send Email';
             alert('Sent!');
-            windows.location('index.html')
+            window.location.href = 'index.html'
         }, (err) => {
             btn.value = 'Send Email';
             alert(JSON.stringify(err));

@@ -138,12 +138,84 @@
                         <a class="nav-link" href="careers.html">Careers</a>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary shadow-lg">Hire Us</button>
+                        <button class="btn btn-primary shadow-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Hire Us</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hire Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card shadow-lg">
+                        <div class="card-body p-5">
+                            <div class="p-3">
+                                <form class="row g-3" method="POST" enctype="multipart/form-data" id="form">
+                                    <div class="col-md-12">
+                                        <label for="inputEmail4" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="inputEmail4" name="fullname">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputEmail4" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" name="email">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputEmail4" class="form-label">Phone</label>
+                                        <input type="text" class="form-control" id="inputEmail4" name="mobileno">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="inputAddress2" class="form-label">Position</label>
+                                        <select class="form-select" aria-label="Default select example" name="position">
+                    <option selected>Choose...</option>
+
+                    <option value="Chief Technical Officer">Chief Technical Officer</option>
+                    <option value="Lead IOT Engineer / Solution Architect">Lead IOT Engineer / Solution
+                      Architect</option>
+                    <option value="IOT Engineer / Solution Architect">IOT Engineer / Solution Architect</option>
+                    <option value="Lead AI Engineer">Lead AI Engineer</option>
+                    <option value="AI Engineer">AI Engineer</option>
+                    <option value="Lead Full Stack Developer">Lead Full Stack Developer</option>
+                    <option value="Full Stack Developer">Full Stack Developer</option>
+                    <option value="Lead Web Developer">Lead Web Developer</option>
+                    <option value="Web Developer">Web Developer</option>
+                    <option value="Lead Application Developer (Android/IOS)">Lead Application Developer
+                      (Android/IOS)</option>
+                    <option value="Application Developer (Android/IOS)">Application Developer (Android/IOS)
+                    </option>
+                    <option value="Lead Embedded / Firmware Engineer">Lead Embedded / Firmware Engineer</option>
+                    <option value="Embedded / Firmware Engineer">Embedded / Firmware Engineer</option>
+                    <option value="Lead PCB Design Engineer">Lead PCB Design Engineer</option>
+                    <option value="PCB Design Engineer">PCB Design Engineer</option>
+                    <option value="PCB Designer">PCB Designer</option>
+                    <option value="Lead Mechatronics engineer">Lead Mechatronics engineer</option>
+                    <option value="Mechatronics engineer">Mechatronics engineer</option>
+                    <option value="Lead UI/UX design engineer">Lead UI/UX design engineer</option>
+                    <option value="UI/UX design engineer">UI/UX design engineer</option>
+                    <option value="Others">Others</option>
+
+                  </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                                        <input type="submit" id="button" class="btn btn-outline-success" value="Apply Now" />
+
+                                    </div>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- End of Navigation Bar -->
 
@@ -227,7 +299,11 @@
     <!-- ========== End Section ========== -->
 
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
-
+    <script type="text/javascript">
+        emailjs.init('Ee_X2GuZ5fsINwESK')
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/hireUs.js"></script>
 </body>
 
 </html>

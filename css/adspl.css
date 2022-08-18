@@ -265,6 +265,12 @@ p:hover {
     margin-top: 8rem;
 }
 
+@media (max-width: 922px) {
+    .about-us-section {
+        margin-top: 15rem;
+    }
+}
+
 .counter-box {
     display: block;
     background: #f6f6f6;
@@ -857,4 +863,56 @@ section.pricing {
     .pricing .card:hover .btn {
         opacity: 1;
     }
+}
+
+.cookie-container {
+    position: fixed;
+    bottom: -100%;
+    left: 30%;
+    right: 30%;
+    background: #2f36403a;
+    color: #f5f6fa;
+    padding: 20px;
+    transition: 400ms;
+}
+
+.cookie-container.active {
+    bottom: 0;
+}
+
+.cookie-container a {
+    color: #f5f6fa;
+}
+
+.cookie-btn {
+    background: #e84118;
+    border: 0;
+    color: #f5f6fa;
+    padding: 12px 48px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .cookie-container {
+        left: 0;
+        right: 0;
+    }
+}
+
+.card-style {
+    border-style: solid;
+    border-width: 3px;
+    box-shadow: 10px -10px 0 -3px white, 10px -10px, 20px -20px 0 -3px white, 20px -20px;
+    transition: box-shadow 1s, top 1s, left 1s;
+    top: 0;
+    left: 0;
+}
+
+.card-style:hover {
+    top: -20px;
+    left: 20px;
+    box-shadow: 0 0 0 -3px white, 0 0, 0 0 0 -3px white, 0 0px;
 }

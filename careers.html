@@ -30,51 +30,6 @@
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     </script>
-
-    <script type="text/javascript">
-        function sendEmail() {
-            var form = document.forms[0];
-            var fullname = form.fullname.value;
-
-            var email = form.email.value;
-            var phone = form.phone.value;
-            var address = form.address.value;
-            var position = form.position.value;
-            var city = form.city.value;
-            var state = form.state.value;
-            var coverletter = form.coverletter.value;
-            var cvlink = form.cvlink.value;
-
-
-            Email.send({
-                    Host: "smtp.gmail.com",
-
-                    Username: "noreply@adspltech.net",
-                    Password: "Nikhil@adspl1",
-                    To: 'nikhilk@adspltech.net, vikasbhadoria@adspltech.net, admin@adspltech.net, info@adspltech.net',
-                    From: "noreply@adspltech.net",
-                    Subject: "Mail From Careers Form",
-                    Body: "Fullname : " + fullname + "<br>" +
-                        "Email : " + email + "<br>" +
-                        "Phone : " + phone + "<br>" +
-                        "Address : " + address + "<br>" +
-                        "Position : " + position + "<br>" +
-                        "State : " + state + "<br>" +
-                        "City : " + city + "<br>" +
-                        "Coverletter : " + coverletter + "<br>" +
-                        "cvlink : " + cvlink + "<br>",
-
-                    // Attachments: [
-                    // {
-                    //   name: filename,
-                    //   path: cv
-                    // }]
-                })
-                .then(function(message) {
-                    alert("Your Application Submitted Successfully")
-                });
-        }
-    </script>
 </head>
 
 <body>
@@ -294,7 +249,7 @@
                                 <div class="card shadow-lg">
                                     <div class="card-body p-5">
                                         <div class="p-3">
-                                            <form class="row g-3" method="POST" enctype="multipart/form-data">
+                                            <form class="row g-3" method="POST" enctype="multipart/form-data" id="careerForm">
                                                 <div class="col-md-12">
                                                     <label for="inputEmail4" class="form-label">Full Name</label>
                                                     <input type="text" class="form-control" id="inputEmail4" name="fullname">
@@ -314,7 +269,7 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <label for="inputAddress2" class="form-label">Position applying for</label>
-                                                    <select class="form-select" aria-label="Default select example" name="position">
+                                                    <select class="form-select" aria-label="Default select example" name="apply_position">
                                 <option selected>Choose...</option>
     
                                 <option value="Chief Technical Officer">Chief Technical Officer</option>
@@ -356,19 +311,19 @@
 
                                                 <div class="col-md-6">
                                                     <label for="inputState" class="form-label">Cover Letter</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="coverletter"></textarea>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="cover_letter"></textarea>
                                                 </div>
 
 
                                                 <div class="col-md-12">
                                                     <label for="inputState" class="form-label">Google Drive link of your CV:</label>
-                                                    <input type="text" class="form-control" id="inputCity" name="cvlink">
+                                                    <input type="text" class="form-control" id="inputCity" name="cv_link">
                                                 </div>
 
 
                                                 <div class="col-12">
                                                     <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-                                                    <input type="button" id="custom-button" class="btn btn-outline-success" value="Apply Now" onclick="sendEmail()" />
+                                                    <input type="submit" id="button" class="btn btn-outline-success" value="Apply Now" />
 
                                                 </div>
                                             </form>
@@ -403,12 +358,12 @@
     <!-- ========== End Section ========== -->
 
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         emailjs.init('Ee_X2GuZ5fsINwESK')
     </script>
-    <script async src="js/hireUs.js"></script>
-
-
+    <script src="js/hireUs.js"></script>
+    <script src="js/careerForm.js"></script>
 </body>
 
 </html>

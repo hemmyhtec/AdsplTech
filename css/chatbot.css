@@ -12,10 +12,10 @@
     position: fixed;
     right: 20px;
     bottom: 70px;
-    width: 300px;
+    width: 350px;
     height: 80vh;
     background-color: aliceblue;
-    z-index: 1000;
+    z-index: 9000;
     transform: all 0.3s ease-out;
     transform: scaleY(0);
     border-radius: 10px;
