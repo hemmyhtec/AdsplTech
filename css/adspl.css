@@ -916,3 +916,12 @@ section.pricing {
     left: 20px;
     box-shadow: 0 0 0 -3px white, 0 0, 0 0 0 -3px white, 0 0px;
 }
+
+.fontSize {
+    font-size: small;
+}
+
+.adjust {
+    text-align: left;
+    font-size: small;
+}
